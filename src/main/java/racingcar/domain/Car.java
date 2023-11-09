@@ -22,7 +22,7 @@ public class Car {
     }
 
     private static MoveInstruction getMoveInstruction(MoveChecker moveChecker) {
-        return moveChecker.canMove();
+        return moveChecker.getMoveInstruction();
     }
 
     public void moveBy(MoveChecker moveChecker) {
@@ -37,6 +37,10 @@ public class Car {
 
     public int getPosition() {
         return position;
+    }
+
+    public boolean isSameWith(int maxPosition) {
+        return getPosition() == maxPosition;
     }
 
     public WinnerDto toWinnerDto() {

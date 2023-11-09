@@ -9,14 +9,14 @@ public class AutoMoveChecker implements MoveChecker {
     }
 
     @Override
-    public MoveInstruction canMove() {
-        if (numberIsMoreThanThree()) {
+    public MoveInstruction getMoveInstruction() {
+        if (canMove()) {
             return MoveInstruction.FORWARD;
         }
         return MoveInstruction.STAY;
     }
 
-    private boolean numberIsMoreThanThree() {
+    private boolean canMove() {
         return randomNumberGenerator.generate() >= MINIMUM_NUMBER;
     }
 }

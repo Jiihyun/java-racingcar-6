@@ -8,7 +8,7 @@ public class ManualMoveChecker implements MoveChecker {
     }
 
     @Override
-    public MoveInstruction canMove() {
+    public MoveInstruction getMoveInstruction() {
         return moveInstruction;
     }
 }
